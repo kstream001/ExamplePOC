@@ -4,7 +4,7 @@ var app        = express();
 var server     = require('http').Server(app);
 var io         = require('socket.io')(server);
 
-server.listen(8000,function(){
+server.listen(3000,function(){
 	console.log('server started on port 3000');
 });
 
