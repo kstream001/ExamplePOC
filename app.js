@@ -46,13 +46,13 @@ app.get('/getTaxCertificate',function(req,res){
 
 app.get('/policyDetails/:id',function(req,res){
 	res.writeHead(200,{'Content-Type':'application/json'});
-	if(req.id == '9348209'){
+	if(req.params.id == '9348209'){
 		res.end(JSON.stringify({"policyNumber":"9348209","policyStartDate":"19/06/2016","policyType":"monthly","policyName":"Simplified Issue Term Life Insurance","premiumAmount":"$4.75","policyEndDate":"27/5/2019","premiumPaymentDate":"19/07/2017","coverageAmount":"$10,000","beneficirayName":"John","termLength":"10 Years"}));
 	}
-	else if(req.id == '1987650'){
+	else if(req.params.id == '1987650'){
 		res.end(JSON.stringify({"policyNumber":"1987650","policyStartDate":"02/07/2007","termLength":"15years","policyType":"monthly","policyName":"Term Life Insurance","premiumAmount":"$35.99","policyEndDate":"02/07/2022","premiumPaymentDate":"02/06/2016","coverageAmount":"$1,000,000","beneficirayName":"David"}));
 	}
-	else if(req.id == '18494'){
+	else if(req.params.id == '18494'){
 		res.end(JSON.stringify({"policyNumber":"18494","policyStartDate":"12/12/2013","policyType":"monthly","policyName":"Whole Life Insurance","premiumAmount":"$83.50","policyEndDate":"27/05/2018","premiumPaymentDate":"12/12/2016","termLength":"10 Years","beneficirayName":"Mike","coverageAmount":"$20,000"}));
 	}
 });
