@@ -28,9 +28,65 @@ app.use('/users', users);
 
 
 
-app.get('/getPremiumDate',function(req,res){
+app.get('/getEmployeeDetails',function(req,res){
 	res.writeHead(200,{'Content-Type':'application/json'});
-	res.end(JSON.stringify({"policies":[{"policyNumber":"9348209","policyStartDate":"19/06/2016","policyType":"monthly","policyName":"Simplified Issue Term Life Insurance","premiumAmount":"$4.75","policyEndDate":"27/5/2019","premiumPaymentDate":"19/07/2017","coverageAmount":"$10,000","beneficirayName":"John","termLength":"10 Years"},{"policyNumber":"18494","policyStartDate":"12/12/2013","policyType":"monthly","policyName":"Whole Life Insurance","premiumAmount":"$83.50","policyEndDate":"27/05/2018","premiumPaymentDate":"12/12/2016","termLength":"10 Years","beneficirayName":"Mike","coverageAmount":"$20,000"},{"policyNumber":"1987650","policyStartDate":"02/07/2007","termLength":"15years","policyType":"monthly","policyName":"Term Life Insurance","premiumAmount":"$35.99","policyEndDate":"02/07/2022","premiumPaymentDate":"02/06/2016","coverageAmount":"$1,000,000","beneficirayName":"David"}]}));
+	res.end(JSON.stringify({
+	"users": [{  
+    "_id":"000000000001",
+    "email_address":"john@microland.com",
+    "hex_color":"color4",
+    "initial":"D",
+    "name":"John Warren",
+    "username":"john",
+    "founder":true,
+    "status":"offline",
+    "updated_date":"2014-12-30T16:26:37.948Z",
+    "profile_photo_url":"https://hostname/avatar.jpg",
+    "signature": {
+      "enabled": false,
+      "body": "Darren Bounds"
+    }  ,
+    "birthday":"Thu Jun 23 2016",
+	"anniversary":"Sat Sep 03 2016"
+},
+{  
+    "_id":"000000000001",
+    "email_address":"mike@microland.com",
+    "hex_color":"color4",
+    "initial":"D",
+    "name":"Mike douglas",
+    "username":"mike",
+    "founder":false,
+    "status":"offline",
+    "updated_date":"2014-12-30T16:26:37.948Z",
+    "profile_photo_url":"https://hostname/avatar.jpg",
+    "signature": {
+      "enabled": false,
+      "body": "Darren Bounds"
+    }  ,
+    "birthday":"Wed Jun 22 2016",
+	"anniversary":"Fri Nov 18 2016"
+},
+{  
+    "_id":"000000000001",
+    "email_address":"david@microland.com",
+    "hex_color":"color4",
+    "initial":"D",
+    "name":"David Fred",
+    "username":"david",
+    "founder":false,
+    "status":"offline",
+    "updated_date":"2014-12-30T16:26:37.948Z",
+    "profile_photo_url":"https://hostname/avatar.jpg",
+    "signature": {
+      "enabled": false,
+      "body": "Darren Bounds"
+    }  ,
+    "birthday":"Fri Jun 24 2016",
+	"anniversary":"Wed Jul 20 2016"
+}
+]
+}));
 });
 
 
