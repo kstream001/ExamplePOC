@@ -122,7 +122,7 @@ app.get('/getEmployeeDetails',function(req,res){
         "addressLine": "52 West Jiangtai Road,Chaoyang",
         "jobCode": "Management & Planning (50070999)",
         "totalTeamSize": "1",
-        "dateOfBirth": "Fri Jun 24 2016",
+        "dateOfBirth": "Thu Jun 23 2016",
         "newToPosition": false,
         "division": "Corporate Services (CORP_SVCS)",
         "veteranSeparated": false,
