@@ -449,7 +449,7 @@ app.get('/searchEmployeesByBirthDate',function(req,res){
     }]}));
 });
 
-app.get('/searchByKeyword/:category/:keyword',function(req,res){
+/* app.get('/searchByKeyword/:category/:keyword',function(req,res){
 	res.writeHead(200,{'Content-Type':'application/json'});
 	var category = req.params.category;
 	var keyword = req.params.keyword;
@@ -462,11 +462,8 @@ app.get('/searchByKeyword/:category/:keyword',function(req,res){
 		res.end(JSON.stringify(result));
 	
 	});
-	/*
-	res.end(JSON.stringify({key:category, keyword:keyword}));
-	*/
-	
-});
+		
+}); */
 
 app.get('/policyDetails/:id',function(req,res){
 	res.writeHead(200,{'Content-Type':'application/json'});
