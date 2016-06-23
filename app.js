@@ -39,7 +39,7 @@ app.get('/getEmployeeDetails',function(req,res){
         "userId": "103073",
         "businessPhone": "(01) 781 67809876",
         "empId": null,
-		"image:http://www.happybirthdaywishes-images.com/wp-content/uploads/2015/05/wishes-for-happy-birthday-picture.jpg",
+		"image":"http://www.happybirthdaywishes-images.com/wp-content/uploads/2015/05/wishes-for-happy-birthday-picture.jpg",
         "lastModifiedDateTime": "/Date(1462957988000+0000)/",
         "username": "jpatrick",
 		"anniversary":"Thu Jun 23 2016",
