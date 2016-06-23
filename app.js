@@ -6,6 +6,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var fs = require('fs');
+var Regex = require('regex');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -456,8 +457,11 @@ app.get('/searchByKeyword/:category/:keyword',function(req,res){
 	console.log("======================================>");
 	fs.readFile('./Employee.json',function(err,data){
 			console.log('***************', err, data);
-			data = JSON.parse(data);
-			var result = _.find(data, function(item){ return item[category] == keyword;});
+			data = JSON.parse(data);	
+			var result = _.find(data, function(item){ 
+				console.log(item[category].indexOf(keyword)>-1);
+				return (item[category].indexOf(keyword)>-1);
+				});
 			console.log('*********************',result);
 		res.end(JSON.stringify(result));
 	
