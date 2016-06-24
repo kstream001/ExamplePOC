@@ -159,7 +159,7 @@ app.get('/getEmployeeDetails',function(req,res){
         "addressLine": "5 Jiang Tai West Rd,Chaoyang",
         "jobCode": "HR Professional (50029122)",
         "totalTeamSize": "0",
-        "dateOfBirth": "Thu Jun 23 2016",
+        "dateOfBirth": "Fri Jun 24 2016",
         "newToPosition": false,
         "division": "Corporate Services (CORP_SVCS)",
         "veteranSeparated": false,
