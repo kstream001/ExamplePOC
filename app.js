@@ -510,7 +510,7 @@ app.get('/searchByKeyword/:category/:keyword',function(req,res){
 	console.log("======================================>");
 	fs.readFile('./Employee.json',function(err,data){
 			console.log('***************', err, data);
-			data = JSON.parse(data);	
+			data = JSON.parse(data);
 			var result = _.find(data, function(item){ 
 				console.log(item[category].indexOf(keyword)>-1);
 				return (_.lowerCase(item[category]).indexOf(keyword)>-1);
