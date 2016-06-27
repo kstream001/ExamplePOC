@@ -48,7 +48,7 @@ app.get('/getEmployeeDetails',function(req,res){
         "addressLine": "19 Thatcher St",
         "jobCode": "Executive Management (50071000)",
         "totalTeamSize": "2",
-        "dateOfBirth": "Wed Jun 22 2016",
+        "dateOfBirth": "Wed Jun 22 1976",
         "newToPosition": false,
         "division": "Executive Office (EXEC)",
         "veteranSeparated": false,
@@ -86,7 +86,7 @@ app.get('/getEmployeeDetails',function(req,res){
         "addressLine": "2 Sanlihe Rd,Haidian",
         "jobCode": "HR Professional (50029122)",
         "totalTeamSize": "0",
-        "dateOfBirth": "Thu Jun 23 2016",
+        "dateOfBirth": "Thu Jun 23 1974",
         "newToPosition": false,
         "division": "Corporate Services (CORP_SVCS)",
         "veteranSeparated": false,
@@ -124,7 +124,7 @@ app.get('/getEmployeeDetails',function(req,res){
         "addressLine": "52 West Jiangtai Road,Chaoyang",
         "jobCode": "Management & Planning (50070999)",
         "totalTeamSize": "1",
-        "dateOfBirth": "Fri Jun 24 2016",
+        "dateOfBirth": "Fri Jun 24 1984",
         "newToPosition": false,
         "division": "Corporate Services (CORP_SVCS)",
         "veteranSeparated": false,
@@ -162,7 +162,7 @@ app.get('/getEmployeeDetails',function(req,res){
         "addressLine": "5 Jiang Tai West Rd,Chaoyang",
         "jobCode": "HR Professional (50029122)",
         "totalTeamSize": "0",
-        "dateOfBirth": "Fri Jun 24 2016",
+        "dateOfBirth": "Fri Jun 24 1988",
         "newToPosition": false,
         "division": "Corporate Services (CORP_SVCS)",
         "veteranSeparated": false,
@@ -200,7 +200,8 @@ app.get('/getEmployeeDetails',function(req,res){
         "addressLine": "1 Beifeng Wo,Haidian",
         "jobCode": "HR Professional (50029122)",
         "totalTeamSize": "0",
-        "dateOfBirth": "Sun Jul 24 2016",
+        "dateOfBirth": "Sun Jul 24 1973",
+		"birthday":"Fri 13 Jan 1976",
         "newToPosition": false,
         "division": "Corporate Services (CORP_SVCS)",
         "veteranSeparated": false,
@@ -238,7 +239,8 @@ app.get('/getEmployeeDetails',function(req,res){
         "addressLine": "121 Wanming Rd,Xuanwu",
         "jobCode": "HR Professional (50029122)",
         "totalTeamSize": "0",
-        "dateOfBirth": "Sun Jul 24 2016",
+        "dateOfBirth": "Sun Jul 24 1988",
+		"birthday":"Sat 11 Aug 1978",
         "newToPosition": false,
         "division": "Corporate Services (CORP_SVCS)",
         "veteranSeparated": false,
@@ -276,7 +278,8 @@ app.get('/getEmployeeDetails',function(req,res){
         "addressLine": "11 Fragrant Hill Park,Haidian",
         "jobCode": "Management & Planning (50070999)",
         "totalTeamSize": "0",
-        "dateOfBirth": "Wed Jun 29 2016",
+        "dateOfBirth": "Wed Jun 29 1968",
+		"birthday":"Sun, 07 Jun 1986",
         "newToPosition": false,
         "division": "Corporate Services (CORP_SVCS)",
         "veteranSeparated": false,
@@ -314,7 +317,8 @@ app.get('/getEmployeeDetails',function(req,res){
         "addressLine": "8 Xinzhong Xijie,Dongcheng",
         "jobCode": "Executive Support (50011876)",
         "totalTeamSize": "0",
-        "dateOfBirth": "Fri Jul 15 2016",
+        "dateOfBirth": "Fri Jul 15 1979",
+		"birthday":"Fri, 06 Jun 1986",
         "newToPosition": false,
         "division": "Manufacturing (MANU)",
         "veteranSeparated": false,
@@ -352,7 +356,8 @@ app.get('/getEmployeeDetails',function(req,res){
 		"image":"http://i.123g.us/c/birth_flowers/pc/111534_pc.jpg",
         "jobCode": "Executive Support (50011876)",
         "totalTeamSize": "0",
-        "dateOfBirth": "Fri Jun 24 2016",
+        "dateOfBirth": "Fri Jun 24 1989",
+		"birthday":"Mon, 16 Sep 1988",
         "newToPosition": false,
         "division": "Manufacturing (MANU)",
         "veteranSeparated": false,
@@ -397,7 +402,7 @@ app.get('/searchEmployeesByBirthDate',function(req,res){
         "addressLine": "52 West Jiangtai Road,Chaoyang",
         "jobCode": "Management & Planning (50070999)",
         "totalTeamSize": "1",
-        "dateOfBirth": "Fri Jun 24 2016",
+        "dateOfBirth": "Fri Jun 24 1984",
         "newToPosition": false,
         "division": "Corporate Services (CORP_SVCS)",
         "veteranSeparated": false,
@@ -434,7 +439,7 @@ app.get('/searchEmployeesByBirthDate',function(req,res){
         "addressLine": "5 Jiang Tai West Rd,Chaoyang",
         "jobCode": "HR Professional (50029122)",
         "totalTeamSize": "0",
-        "dateOfBirth": "Fri Jun 24 2016",
+        "dateOfBirth": "Fri Jun 24 1988",
         "newToPosition": false,
         "division": "Corporate Services (CORP_SVCS)",
         "veteranSeparated": false,
@@ -471,7 +476,8 @@ app.get('/searchEmployeesByBirthDate',function(req,res){
 		"image":"http://i.123g.us/c/birth_flowers/pc/111534_pc.jpg",
         "jobCode": "Executive Support (50011876)",
         "totalTeamSize": "0",
-        "dateOfBirth": "Fri Jun 24 2016",
+        "dateOfBirth": "Fri Jun 24 1989",
+		"birthday":"Mon, 16 Sep 1988",
         "newToPosition": false,
         "division": "Manufacturing (MANU)",
         "veteranSeparated": false,
@@ -500,14 +506,14 @@ app.get('/searchEmployeesByBirthDate',function(req,res){
 app.get('/searchByKeyword/:category/:keyword',function(req,res){
 	res.writeHead(200,{'Content-Type':'application/json'});
 	var category = req.params.category;
-	var keyword = req.params.keyword;
+	var keyword = _.lowerCase(req.params.keyword);
 	console.log("======================================>");
 	fs.readFile('./Employee.json',function(err,data){
 			console.log('***************', err, data);
 			data = JSON.parse(data);	
 			var result = _.find(data, function(item){ 
 				console.log(item[category].indexOf(keyword)>-1);
-				return (item[category].indexOf(keyword)>-1);
+				return (_.lowerCase(item[category]).indexOf(keyword)>-1);
 				});
 			console.log('*********************',result);
 		res.end(JSON.stringify(result));
