@@ -328,7 +328,7 @@ app.get('/getEmployeeDetails',function(req,res){
         "lastName": "Fung",
         "hireDate": "/Date(1388966400000)/",
         "country": "CHN",
-        "email": "hanfung@microland.com",
+        "email": "fung@microland.com",
         "defaultLocale": "en_US",
         "minority": false,
         "department": "Operations CN (50100010)",
