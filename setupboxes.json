@@ -24,20 +24,7 @@
 "name":"MultiTV Connection",
 "shortDescription":"Multiple televisions at home?",
 "longDescription":"Our MultiTV Service allows you to access your favourite Tata Sky Channels and services on multiple televisions at home at an attractive pricing for the 2nd, 3rd and 4th connection.",
-"cost": [
-            {
-                "type": "Monthly",
-                "charge": "INR 240"
-            },
-            {
-                "type": "Semi-Annual",
-                "charge": "INR 1360"
-            },
-            {
-                "type": "Annual",
-                "charge": "INR 2640"
-            }
-        ],
+"cost": "INR 2640",
 "includes":"",
 "image":"http://www.tatasky.com/wps/wcm/connect/513a5d87-b704-499b-801f-c88ddee9fafb/multi-tv.png?MOD=AJPERES&CACHEID=513a5d87-b704-499b-801f-c88ddee9fafb",
 "features":""
