@@ -49,6 +49,40 @@ app.get('/setupbox/:id',function(req,res){
 		
 }); 
 
+
+app.get('/natureTypes',function(req,res){
+	res.writeHead(200,{'Content-Type':'application/json'});
+	var setupid = req.params.id;
+	console.log("======================================>");
+	fs.readFile('./natureRequest.json',function(err,data){
+			console.log('***************', err, data);
+			data = JSON.parse(data);
+		res.end(JSON.stringify(data));
+	
+	});
+		
+}); 
+
+
+app.get('/contactExisting/:id',function(req,res){
+	res.writeHead(200,{'Content-Type':'application/json'});
+	var setupid = req.params.id;
+	console.log("======================================>");
+	fs.readFile('./natureRequest.json',function(err,data){
+			console.log('***************', err, data);
+			data = JSON.parse(data);
+			var result = _.find(data, function(item){ 
+				return item.id == setupid;
+				});
+			console.log('*********************',result);
+		res.end(JSON.stringify(result));
+	
+	});
+		
+}); 
+
+
+
 app.get('/acceptInvitation',function(req,res){
 	res.writeHead(200,{'Content-Type':'application/json'});
 	res.end(JSON.stringify({"accept":"Invitation accepted"}))

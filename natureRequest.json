@@ -1,0 +1,101 @@
+[
+{
+	"id": "1",
+	"name": "Billing related",
+	"subtype": [{
+		"name": "Wrong charges dispute"
+	},
+	{
+		"name": "Engineer taken money"
+	},
+	{
+		"name": "Relocation charges dispute"
+	},
+	{
+		"name": "New activation and upgrade dispute"
+	},
+	{
+		"name": "Package dispute"
+	},
+	{
+		"name": "Field Repair related"
+	}]
+},
+{
+	"id": "2",
+	"name": "Account update",
+	"subtype": [{
+		"name": "Resumption"
+	},
+	{
+		"name": "Address correction"
+	}]
+},
+{
+	"id": "3",
+	"name": "Request for services",
+	"subtype": [{
+		"name": "Moving home"
+	},
+	{
+		"name": "Request for a second digicomp"
+	}]
+},
+{
+	"id": "4",
+	"name": "Online statement related",
+	"subtype": [{
+		"name": "Request for an online statement"
+	},
+	{
+		"name": "Need clarification"
+	}]
+},
+{
+	"id": "5",
+	"name": "Unable to view services",
+	"subtype": [{
+		"name": "Blank/blue/black screen"
+	},
+	{
+		"name": "No signal"
+	}]
+},
+{
+	"id": "6",
+	"name": "Audio/sound related",
+	"subtype": [{
+		"name": "No audio output"
+	}]
+},
+{
+	"id": "7",
+	"name": "Channel/Packages",
+	"subtype": [{
+		"name": "Channel Unavailable"
+	}]
+},
+{
+	"id": "8",
+	"name": "Recharge related",
+	"subtype": [{
+		"name": "Wrong account recharged"
+	},
+	{
+		"name": "Online recharge - amount not credited"
+	}]
+},
+{
+	"id": "9",
+	"name": "Upgrade",
+	"subtype": [{
+		"name": "HD"
+	},
+	{
+		"name": "+Transfer HD"
+	},
+	{
+		"name": "4K"
+	}]
+}
+]
